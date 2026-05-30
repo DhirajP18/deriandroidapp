@@ -412,7 +412,7 @@ fun parseSidebarJson(json: String): List<SidebarMenu> {
             }
         }
 
-        flattened.filter { it.menuUrl.isNotBlank() }
+        flattened.filter { !it.menuUrl.isNullOrBlank() }
     } catch (_: Exception) {
         emptyList()
     }

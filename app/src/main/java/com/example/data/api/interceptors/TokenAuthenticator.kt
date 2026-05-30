@@ -8,8 +8,7 @@ import okhttp3.Authenticator
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
-import okhttp3.ResponseBody.Companion.toResponseBody
-import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.RequestBody.Companion.toRequestBody
 
 class TokenAuthenticator(
     private val dataStoreManager: DataStoreManager,
@@ -62,5 +61,4 @@ class TokenAuthenticator(
         return count
     }
 
-    private fun String.toRequestBody() = this.toResponseBody("application/json".toMediaTypeOrNull())
 }
