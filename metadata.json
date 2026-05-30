@@ -1,0 +1,6 @@
+{
+  "name": "DERISET",
+  "description": "Premium native Dairy Management System client with bilingual English/Marathi support, on-device offline caching, interactive analytics, and comprehensive transactions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
