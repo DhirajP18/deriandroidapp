@@ -31,7 +31,7 @@ data class ApiResponse<T>(
 // REST Requests & DTOs
 data class LoginRequest(
     @Json(name = "UserName") val userName: String,
-    @Json(name = "Password") val password: String
+    @Json(name = "password") val password: String
 )
 
 data class LoginResponse(

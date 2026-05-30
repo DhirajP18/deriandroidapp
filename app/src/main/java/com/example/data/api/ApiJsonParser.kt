@@ -7,8 +7,7 @@ object ApiJsonParser {
     fun parseObject(raw: String?): JSONObject? {
         if (raw.isNullOrBlank()) return null
         return try {
-            val root = JSONObject(raw)
-            unwrapObject(root)
+            JSONObject(raw)
         } catch (_: Exception) {
             null
         }
@@ -109,10 +108,5 @@ object ApiJsonParser {
             }
         }
         return JSONArray()
-    }
-
-    private fun unwrapObject(obj: JSONObject): JSONObject {
-        val nested = readNestedObject(obj, "Data", "data", "Result", "result")
-        return nested ?: obj
     }
 }
